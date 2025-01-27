@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-             * {
+            * {
               margin: 0px;
               padding: 0px;
               font-family: "Nunito Sans", serif;
@@ -58,14 +58,96 @@
               display: flex;
             }
 
-            
+
+         
+            .container {
+    display: flex;
+    align-items: flex-start;
+    background-color: #BCCCDC;
+        padding: 20px;
+    border-radius: 10px;
+}
+
+.form-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.headline {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subheadline {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-field {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dropdown {
+    width: 84%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.status-link {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.status-link a {
+    color: #0288d1;
+    text-decoration: none;
+}
+
+
+
+
 .Sixth_container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
     background-color: #d9eafd;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .foot_text {
@@ -79,7 +161,7 @@
 }
 
 .foot_text a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -121,7 +203,7 @@
     text-align: center;
     padding: 10px;
     background-color: #d9eafd;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .seventh-container hr {
@@ -134,7 +216,7 @@
 
 .seventh-container a {
     margin: 0 10px;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 24px;
     transition: color 0.3s ease;
@@ -144,45 +226,7 @@
     color: #0073e6;
 }
 
-        /* Responsive design */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .nav {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-    
-    .logo {
-        margin-bottom: 10px;
-    }
 
-
-    
-/* Responsive design */
-.Sixth_container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .map {
-        text-align: center;
-        margin-top: 15px;
-    }
-    
-    .footer-logo {
-        margin-bottom: 15px;
-    }
-
-
-    .social-buttons .btn {
-    margin-bottom: 10px;
-  }
-}
     </style>
 </head>
 <body>
@@ -195,12 +239,37 @@
             <a href="#" class="nav-link">Services</a>
             <a href="#" class="nav-link">About Us</a>
             <a href="#" class="nav-link">Contact Us</a>
+            <a href="#" class="nav-link">User Profile</a>
+            <a href="#" class="nav-link">Employee Profile</a>
             <a href="#" class="nav-link">Login/Registration</a>
             <a href="#" class="nav-link">Join Our Network</a>
+            <a href="#" class="nav-link">Log out</a>
+  
+  
         </div>
-        <div>
-
+    </div>
+    <div class="container">
+        <div class="form-section">
+            <h1 class="headline">Start earning money this week!</h1>
+            <p class="subheadline">Gain access to hundreds of jobs in your city and build your own schedule.</p>
+            <form class="signup-form">
+                <input type="text" class="input-field" placeholder="First name">
+                <input type="text" class="input-field" placeholder="Last name">
+                <input type="text" class="input-field" placeholder="Email or phone number">
+                <input type="text" class="input-field" placeholder="Zip Code">
+                <select class="dropdown">
+                    <option>Your primary service</option>
+                </select>
+                <button type="submit" class="submit-button">Let's Get Started</button>
+            </form>
+            <p class="status-link">Already applied? <a href="#">Check your application status here.</a></p>
         </div>
+        <div class="image-section">
+            <img src="./master pictures/OIP (9).jpg" alt="Job opportunity image">
+        </div>
+    </div>
+    
+        
 
   
         <div class="Sixth_container">
@@ -223,38 +292,6 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.0097298110522!2d35.85224372511936!3d32.55258557375814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c7715f2c2e7ab%3A0x51755840c8ddbefd!2sOrange%20Digital%20Village%20Irbid!5e0!3m2!1sar!2sjo!4v1734852423304!5m2!1sar!2sjo" width="325" height="275" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-        <div class="seventh-container">
-            <hr />
-            <p>&copy; 2025 Complete Property Care.com</p>
-      
-            <section class="social-buttons py-5 bg-light">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-md-8">
-                    <div class="d-flex flex-wrap justify-content-center gap-3">
-                      <a href="#" class="btn btn-primary btn-lg">
-                        <i class="bi bi-facebook me-2"></i>
-                      </a>
-                      <a href="#" class="btn btn-info btn-lg text-white">
-                        <i class="bi bi-twitter me-2"></i>
-                      </a>
-                      <a href="#" class="btn btn-danger btn-lg">
-                        <i class="bi bi-instagram me-2"></i>
-                      </a>
-                      <a href="#" class="btn btn-success btn-lg">
-                        <i class="bi bi-whatsapp me-2"></i>
-                      </a>
-            
-                      <a href="#" class="btn btn-primary btn-lg" style="background-color: #d9eafd; border-color: #0077b5;">
-                        <i class="bi bi-linkedin me-2"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-      
-        </div>
-        
+       
 </body>
 </html>
