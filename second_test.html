@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="./master pictures/logo.png" alt="Work Image" class="logo" />
+        </a>
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav" id="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="Services.html" class="nav-link">Services</a>
+            <a href="About Us.html" class="nav-link">About Us</a>
+            <a href="Contact Us.html" class="nav-link">Contact Us</a>
+            <a href="User_profile.html" class="nav-link">User Profile</a>
+            <a href="Employee_profile.html" class="nav-link">Employee Profile</a>
+            <a href="Login.html" class="nav-link">Login/Registration</a>
+            <a href="Employee Job Application.html" class="nav-link">Join Our Network</a>
+            <a href="#" class="nav-link">Log out</a>
+        </div>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
