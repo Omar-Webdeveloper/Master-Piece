@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section.card {
+    width: 900px;
+    height: 900px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: 20px 0;
+    padding: 20px;
+    position: relative;
+    margin-left: 55px;
+}
+
+section.card-image-section {
+    display: flex;
+}
+
+.card-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+section.card-content {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+
+
+section.card-content h6 {
+    margin: 5px 0;
+}
+
+
+
+section.card-bill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+    width: 355px;
+    height: 435px;
+    border-left: 1px solid #ccc;
+    border: 1px solid #020202; /* Add this line for a border */
+    border-radius: 8px; /* Optional: add border radius */
+    margin-left: 20px; /* Optional: add margin to separate from card content */}
+
+section.card-bill h3 {
+    margin: 5px 0;
+}
+
+section.card-bill h6 {
+    margin: 5px 0;
+}
+
+section.card-bill hr {
+    width: 100%;
+    margin: 10px 0;
+}
+
+section.card-bill label {
+    margin: 5px 0;
+}
+
+section.card-bill input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 120px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+.words-container {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.word {
+    margin: 0 10px; /* Optional: adjust spacing between words */
+}
+
+.divider-line {
+    margin-top: 10px; /* Optional: adjust spacing above the line */
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    width: 500px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.timetable {
+  border:1px solid black;
+}
+
+
+.slider {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    top: -405px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 120px;
+    display: block;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+.review-container {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .review-rating {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .review-rating .stars {
+            color: gold;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="card">
+        <section class="card-image-section">
+            <img src="./master pictures/download (3).jpg" alt="Employee Image" class="card-image">
+        </section>
+        <section class="card-content">
+            <h3>John Mark</h3>
+            <h3>Very Good ⭐⭐⭐⭐⭐ (90)</h3>
+            <h3>Available Now</h3>
+        </section>
+        
+        <section class="card-bill">
+            <h3>$130.00</h3>
+            <h6>starting price</h6>
+            <hr>
+            <label for="country">Country</label>
+            <input type="text" id="country" placeholder="country">
+            <hr>            
+            <label for="country">Affected appliances or fixtures  </label>
+            <input type="text" id="country" placeholder="Select answer(s)">
+            <hr>
+            <label for="country">Emergency plumbing issue</label>
+            <input type="text" id="country" placeholder="Select answer(s)">
+            <hr>
+            <button class="action-button">Book Now</button>
+            <p>Available Now</p>
+        </section>
+    </section>
+    <div style="position: absolute;
+    top: 226px;
+    left: 85px;">
+
+   
+    <div class="words-container">
+        <span class="word">About</span>
+        <span class="word">Photos</span>
+        <span class="word">Review</span>
+        <span class="word">Credentials</span>
+        <span class="word">FAQs</span>
+    </div>
+    <hr class="divider-line">
+</div>
+<pre style="position: absolute;
+top: 265px;
+left: 85px;">
+Introduction
+
+    Our commitment is in the quality of work in the shortest possible
+    time. We focus on our customer's needs and work to earn their 
+    respect by building long-term relationships based on mutual trust
+    and total customer satisfaction.
+See More..
+</pre>
+    <table  class="timetable" style="position: absolute;
+    top: 395px;
+    left: 78px;">
+        <caption>Business hours
+        </caption>
+        <tr>
+          <td>Sun</td>
+          <td>8:00 am - 5:00 pm</td>
+        </tr>
+        <tr>
+          <td>Sun</td>
+          <td>8:00 am - 5:00 pm</td>
+        </tr>
+      </table>
+
+      <table style="position: absolute;
+      top: 395px;
+      left: 278px;">
+        <caption>Payment methods</caption>
+        <tr>
+          <td style="    width: 200px;
+">This pro accepts payments via Cash, Check, Credit card, and Square cash app.</td>
+        </tr>
+      </table>
+      <table style="position: absolute;
+      top: 490px;
+      left: 100px;"> 
+        <tr>
+            <td>      <button class="action-button">Make Call</button>
+            </td>
+            <td>      <button class="action-button"> Messege</button>
+            </td>
+        </tr>
+      </table>
+
+      <div class="slider">
+        <button class="nav-btn prev-btn" onclick="prevSlide()">&#10094;</button>
+        <div class="slides">
+            <img src="./master pictures/nozzle-repair-before-after.jpg" alt="Image 1">
+            <img src="./master pictures/nozzle-repair-before-after.jpg" alt="Image 1">
+            <img src="./master pictures/nozzle-repair-before-after.jpg" alt="Image 1">
+    
+        </div>
+        <button class="nav-btn next-btn" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <script>
+        let slideIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+    
+    if (index >= totalSlides) {
+        slideIndex = 0;
+    } else if (index < 0) {
+        slideIndex = totalSlides - 1;
+    } else {
+        slideIndex = index;
+    }
+
+    const offset = -slideIndex * 100;
+    slides.style.transform = `translateX(${offset}%)`;
+}
+
+function nextSlide() {
+    showSlide(slideIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(slideIndex - 1);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(slideIndex);
+});
+
+    </script>
+
+<div class="review-container">
+    <div class="review-title">Reviews</div>
+    <div class="review-text">
+        Customers rated this pro highly for professionalism, responsiveness, and work quality.
+    </div>
+    <div class="review-rating">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        (90)
+    </div>
+
+</body>
+</html>

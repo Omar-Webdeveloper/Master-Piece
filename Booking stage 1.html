@@ -58,7 +58,135 @@
               display: flex;
             }
 
-            
+
+            .second_section {
+    background-image: url("./master pictures/bathroom-plumbing.jpg");
+    height: 555px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.8);
+    transition: filter 0.3s ease-in-out;
+}
+
+.second_section:hover {
+    filter: brightness(1);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.search-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.search-box {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.search-box:focus {
+    border-color: #007BFF;
+}
+
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+            section.card {
+    width: 900px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: 20px 0;
+    padding: 20px;
+    position: relative;
+}
+
+section.card-image-section {
+    display: flex;
+    align-items: center;
+}
+
+.card-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+section.card-content {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+section.card-content h3 {
+    margin: 5px 0;
+}
+section.card-content h6 {
+    margin: 5px 0;
+}
+
+section.card-extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.extra-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+       
+
 .Sixth_container {
     display: flex;
     flex-wrap: wrap;
@@ -160,40 +288,8 @@
     .logo {
         margin-bottom: 10px;
     }
-    .second_section {
-    background-image: url("./master pictures/bathroom-plumbing.jpg");
-    height: 555px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-}
-    .search-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-        .search-box {
-            width: 300px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .search-button {
-            padding: 10px;
-            border: none;
-            background-color: #007BFF;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .search-button:hover {
-            background-color: #0056b3;
-        }
     
+
 /* Responsive design */
 .Sixth_container {
         flex-direction: column;
@@ -235,16 +331,55 @@
         </div>
     </div>
 
-    
-  
-  <div class="second_section">
-    <div class="search-container">
-        <input type="text" class="search-box" placeholder="Search...">
-        <button class="search-button">Search</button>
+    <div class="second_section">
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
     </div>
-</div>
+    
 
+    <section class="card">
+        <section class="card-image-section">
+            <img src="./master pictures/download (3).jpg" alt="Employee Image" class="card-image">
+        </section>
+        <section class="card-content">
+            <h3>John mark </h3>
+            <h3>Very Good ⭐⭐⭐⭐⭐ (90)</h3>
+            <h3>Available Now</h3>
+            <p>Our commitment is in the quality of work in the shortest possible time. We focus on our customer's needs and work to earn their respect by building long-term relationships based on mutual trust and total customer satisfaction.</p>
+        </section>
+        <section class="card-extra">
+            <h3>$130.00</h3>
+            <h6>starting price</h6>
+            <h6>features projects:</h6>
+            <img src="./master pictures/nozzle-repair-before-after.jpg" alt="Additional Image" class="extra-image">
+            <button class="action-button">Book Now</button>
+        </section>
+    </section>
+    
+    <section class="card">
+        <section class="card-image-section">
+            <img src="./master pictures/download (4).jpg" alt="Employee Image" class="card-image">
+        </section>
+        <section class="card-content">
+            <h3>Henry mark </h3>
+            <h3>Very Good ⭐⭐⭐⭐⭐ (90)</h3>
+            <h3>Available Now</h3>
+            <p>We are the water heater and drain experts of Northern California offering free estimates, fair rates, and superior workmanship. Our team has been servicing the Bay Area for over 15 years. Our company is licensed, bonded, and insured. Our specialists are equipped, experienced, and provides a full range of services.</p>
+        </section>
+        <section class="card-extra">
+            <h3>$110.00</h3>
+            <h6>starting price</h6>
+            <h6>features projects:</h6>
+            <img src="./master pictures/nozzle-repair-before-after.jpg" alt="Additional Image" class="extra-image">
+            <button class="action-button">Book Now</button>
+        </section>
+    </section>
+    
 
+ 
+ 
   
         <div class="Sixth_container">
             <div class="foot_text">
@@ -270,7 +405,7 @@
             <hr />
             <p>&copy; 2025 Complete Property Care.com</p>
       
-            <section class="social-buttons py-5 bg-light">
+            <div class="social-buttons py-5 bg-light">
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-md-8">
@@ -295,7 +430,7 @@
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
       
         </div>
         
