@@ -20,8 +20,8 @@
                 background-color: #d9eafd;
                 opacity: 70%;
                 padding: 10px 20px;
-                position: fixed;
-                width: 100%;
+                position: static;
+                width: 96.8%;
                 height: 60px;
                 z-index: 1000;
                 display: flex;
@@ -72,7 +72,7 @@
 
             section.card {
     width: 900px;
-    height: 1200px;
+    height: 2200px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -188,7 +188,7 @@ section.card-bill input {
     margin: auto;
     overflow: hidden;
     border: 1px solid #ccc;
-    top: -405px;
+    top: -1704px;
     left: -190px;
 }
 
@@ -223,34 +223,36 @@ section.card-bill input {
 .next-btn {
     right: 10px;
 }
- .review-container {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ .review-container1 {
+    font-family: Arial, sans-serif;
+    width: 460px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100px;
         }
 
-        .review-title {
+        .review-title1 {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
-        .review-text {
+        .review-text1 {
             font-size: 16px;
             margin-bottom: 10px;
         }
 
-        .review-rating {
+        .review-rating1 {
             display: flex;
             align-items: center;
             font-size: 18px;
         }
 
-        .review-rating .stars {
+        .review-rating1 .stars1 {
             color: gold;
             margin-right: 5px;
         } 
@@ -259,8 +261,129 @@ section.card-bill input {
 
 
 
+        .a-review-container {
+            left: 173px;
+    position: relative;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 460px;
+    top: -1495px;
+    }
+    .a-review-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .a-review-text {
+        margin-bottom: 10px;
+    }
+    .a-review-rating {
+        margin-bottom: 10px;
+    }
+    .a-review-details {
+        margin-bottom: 10px;
+    }
+    .a-details-text {
+        margin-bottom: 5px;
+    }
+    .a-details-subtext {
+        font-style: italic;
+        margin-bottom: 5px;
+    }
+    .a-details-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .a-review-date {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+        color: #888;
+    }
+    .a-stars {
+        color: gold;
+    }
 
 
+
+
+    .credentials-card {
+        border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 470px;
+    position: absolute;
+    top: 1734px;
+    left: 170px;
+}
+
+.credentials-title, .license-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.license-details {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.license-note {
+    font-style: italic;
+}
+
+.license-verified {
+    display: block;
+    margin-top: 8px;
+    color: #888;
+}
+
+.credential-details-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.credential-details-link:hover {
+    text-decoration: underline;
+}
+
+
+.faq-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 470px;
+    margin: 20px auto;
+    position: absolute;
+    top: 1890px;
+    left: 170px;
+}
+
+.faq-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.faq-question p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.faq-divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 20px 0;
+}
 
 
 
@@ -274,6 +397,8 @@ section.card-bill input {
     padding: 20px;
     background-color: #d9eafd;
     color: white;
+    /* position: absolute;
+    top: 2360px; */
 }
 
 .foot_text {
@@ -440,7 +565,7 @@ section.card-bill input {
         </section>
     </section>
     <div style="position: absolute;
-    top: 226px;
+    top: 285px;
     left: 175px;">
 
    
@@ -454,7 +579,7 @@ section.card-bill input {
     <hr class="divider-line">
 </div>
 <pre style="position: absolute;
-top: 265px;
+top: 315px;
 left: 190px;">
 Introduction
 
@@ -465,7 +590,7 @@ Introduction
 See More..
 </pre>
     <table  class="timetable" style="position: absolute;
-    top: 405px;
+    top: 455px;
     left: 205px;">
         <caption>Business hours
         </caption>
@@ -480,7 +605,7 @@ See More..
       </table>
 
       <table style="    position: absolute;
-      top: 400px;
+      top: 455px;
       left: 415px;">
         <caption>Payment methods</caption>
         <tr>
@@ -489,7 +614,7 @@ See More..
         </tr>
       </table>
       <table style="position: absolute;
-      top: 490px;
+      top: 545px;
       left: 285px;"> 
         <tr>
             <td>      <button class="action-button" >Make Call</button>
@@ -544,40 +669,95 @@ document.addEventListener('DOMContentLoaded', () => {
 <div style="position: absolute;
 top: 777px;
 left: 173px;">
-<div class="review-container">
-    <div class="review-title">Reviews</div>
-    <div class="review-text">
+<div class="review-container1">
+    <div class="review-title1">Reviews</div>
+    <div class="review-text1">
         Customers rated this pro highly for professionalism, responsiveness, and work quality.
     </div>
-    <div class="review-rating">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <div class="review-rating1">
+        <div class="stars1">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         (90)
+    </div>
+</div>
+</div>
+
+
+<div class="a-review-container">
+    <div class="a-review-title">Reviews</div>
+    <div class="a-review-text">
+        very good
+    </div>
+    <div class="a-review-rating">
+        <div class="a-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        (90)
+    </div>
+    <div class="a-review-details">
+        <div class="a-details-text">
+            The technician arrived on time, did a thorough inspection and gave us a detailed diagnosis of the problem. He was very knowledgeable and had a good understanding of the work. The quote the company provided for the job however was more than the competitors so we decided to go with another company in the end.
+        </div>
+        <div class="a-details-subtext">
+            Details: No, repair is not urgent • Only one drain has issues • Clogging • Slow draining • House
+        </div>
+        <div class="a-details-title">Plumbing Drain Repair</div>
+    </div>
+    <div class="a-review-date">
+        3 days ago
     </div>
 </div>
 
-<div class="review-container">
-    <div class="review-title">Reviews</div>
-    <div class="review-text">
-        Customers rated this pro highly for professionalism, responsiveness, and work quality.
+
+<div class="a-review-container">
+    <div class="a-review-title">Reviews</div>
+    <div class="a-review-text">
+        very good
     </div>
-    <div class="review-rating">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <div class="a-review-rating">
+        <div class="a-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         (90)
+    </div>
+    <div class="a-review-details">
+        <div class="a-details-text">
+            The technician arrived on time, did a thorough inspection and gave us a detailed diagnosis of the problem. He was very knowledgeable and had a good understanding of the work. The quote the company provided for the job however was more than the competitors so we decided to go with another company in the end.
+        </div>
+        <div class="a-details-subtext">
+            Details: No, repair is not urgent • Only one drain has issues • Clogging • Slow draining • House
+        </div>
+        <div class="a-details-title">Plumbing Drain Repair</div>
+    </div>
+    <div class="a-review-date">
+        2 days ago
     </div>
 </div>
 
-<div class="review-container">
-    <div class="review-title">Reviews</div>
-    <div class="review-text">
-        Customers rated this pro highly for professionalism, responsiveness, and work quality.
+<div class="credentials-card">
+    <div class="credentials-title">Credentials</div>
+    <div class="license-title">License</div>
+    <div class="license-details">
+        License Type: Multi-state National Account - 
+        <span class="license-note">Ask Pro about exact licensing (DC)</span>
+        <span class="license-verified">License verified on 8/19/2024</span>
     </div>
-    <div class="review-rating">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        (90)
+    <a href="" class="credential-details-link">View credential details</a>
+</div>
+<div class="faq-card">
+    <div class="faq-title">FQA</div>
+    <div class="faq-question">
+        <p>What should the customer know about your pricing (e.g., discounts, fees)?</p>
+        <p>Elite Rooter charges by the job not the hour so our clients know the price before we start and there are no surprises afterwards. Please ask about coupons that we often have for our drain cleaning services. We always offer 15% discounts for our seniors, military and educators. Coupons/discounts cannot be combined.
+        </p>
+    </div>
+    <hr class="faq-divider">
+    <div class="faq-question">
+        <p>What is your typical process for working with a new customer?</p>
+        <p>We schedule same day appointments as needed or we can schedule at a time and date that works best for you. Once scheduled you will get a call from our technician when they are on their way to your home/business. Upon arrival the technician will diagnose the plumbing problem, communicate with you possible solutions and then if approved by you, the technician will start the work. We do not charge any trip fees and other hidden costs. All estimates are complimentary.</p>
     </div>
 </div>
-</div>
-  
+
+
+
+  <div style="position: absolute;
+  top: 2360px;
+  width: 1200px;">
         <div class="Sixth_container">
             <div class="foot_text">
                 <p><a href="#">📞+00962 79 297 1776</a></p>
@@ -587,11 +767,15 @@ left: 173px;">
             </div>
             <div class="sixth_text">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#S2">About Us</a>
-                    <a class="nav-item nav-link active" href="#S3">Services</a>
-                    <a class="nav-item nav-link active" href="#S3">Projects</a>
-                    <a class="nav-item nav-link active" href="#S4">Login/Registration</a>
-                    <a class="nav-item nav-link active" href="#S5">Join Our Network</a>
+                    <a class="nav-item nav-link active" href="index.html">Home </a>
+                    <a class="nav-item nav-link active" href="Services.html">Services</a>
+                    <a class="nav-item nav-link active" href="About Us.html">About Us</a>
+                    <a class="nav-item nav-link active" href="Contact Us.html">Contact Us</a>
+                    <a class="nav-item nav-link active" href="User_profile.html">User Profile</a>
+                    <a class="nav-item nav-link active" href="Employee_profile.html">Employee Profile</a>
+                    <a class="nav-item nav-link active" href="Login.html">Login/Registration</a>
+                    <a class="nav-item nav-link active" href="Employee Job Application.html">Join Our Network</a>
+                    <a class="nav-item nav-link active" href="#">Log out</a>
                 </div>
             </div>
             <div class="map">
@@ -630,6 +814,6 @@ left: 173px;">
             </section>
       
         </div>
-        
+    </div>
 </body>
 </html>
