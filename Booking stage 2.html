@@ -154,6 +154,59 @@ section.card-bill input {
 .action-button:hover {
     background-color: #0056b3;
 }
+
+.modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            padding-top: 100px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            width: 600px;
+            height: 650px;
+            margin: 5% auto;
+            padding: 20px;
+            border: 2px solid #888;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+
+
+
+
 .words-container {
     display: flex;
     justify-content: space-between;
@@ -560,10 +613,165 @@ section.card-bill input {
             <label for="country">Emergency plumbing issue</label>
             <input type="text" id="country" placeholder="Select answer(s)">
             <hr>
-            <button class="action-button">Book Now</button>
+            <button id="startBtn" class="action-button">Book Now</button>
             <p>Available Now</p>
         </section>
     </section>
+
+  <!-- Modal 1 -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p><strong>What is your emergency plumbing issue?</strong></p>
+        <input type="checkbox" id="leak"> Leak<br>
+        <input type="checkbox" id="clog"> Clog<br>
+        <input type="checkbox" id="noWater"> No Water<br>
+        <input type="checkbox" id="overflow"> Overflow<br>
+        <input type="checkbox" id="otherIssue"> Other<br>
+        <button class="button" onclick="nextModal('modal1', 'modal2')">Next</button>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p><strong>Where is the issue located?</strong></p>
+        <input type="checkbox" id="kitchen"> Kitchen<br>
+        <input type="checkbox" id="bathroom"> Bathroom<br>
+        <input type="checkbox" id="basement"> Basement<br>
+        <input type="checkbox" id="outside"> Outside<br>
+        <input type="checkbox" id="otherLocation"> Other<br>
+        <button class="button" onclick="prevModal('modal2', 'modal1')">Previous</button>
+        <button class="button" onclick="nextModal('modal2', 'modal3')">Next</button>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p><strong>Which appliances or fixtures are affected by the issue?</strong></p>
+        <input type="checkbox" id="sink"> Sink<br>
+        <input type="checkbox" id="toilet"> Toilet<br>
+        <input type="checkbox" id="shower"> Shower<br>
+        <input type="checkbox" id="washer"> Washer<br>
+        <input type="checkbox" id="otherFixture"> Other<br>
+        <button class="button" onclick="prevModal('modal3', 'modal2')">Previous</button>
+        <button class="button" onclick="nextModal('modal3', 'modal4')">Next</button>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p><strong>What type of property?</strong></p>
+        <input type="checkbox" id="house"> House<br>
+        <input type="checkbox" id="apartment"> Apartment<br>
+        <input type="checkbox" id="commercial"> Commercial<br>
+        <input type="checkbox" id="otherProperty"> Other<br>
+        <button class="button" onclick="prevModal('modal4', 'modal3')">Previous</button>
+        <button class="button" onclick="nextModal('modal4', 'modal5')">Next</button>
+    </div>
+</div>
+
+<!-- Modal 5 -->
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p><strong>Would you like to add photos to describe your emergency plumbing issue?</strong></p>
+        <input type="file" id="question5">
+        <button class="button" onclick="prevModal('modal5', 'modal4')">Previous</button>
+        <button class="button" onclick="nextModal('modal5', 'modal6')">Next</button>
+    </div>
+</div>
+
+<!-- Modal 6 -->
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p><strong>When do you need this job to start?</strong></p>
+        <input type="datetime-local" id="question6"><br><br>
+        <p><strong>Zip Code:</strong></p>
+        <input type="text" id="zipcode"><br><br>
+        <p><strong>Phone number:</strong></p>
+        <input type="tel" id="phone"><br><br>
+        <input type="checkbox" id="textUpdates"> <label for="textUpdates">Text me updates</label><br><br>
+        <button class="button" onclick="prevModal('modal6', 'modal5')">Previous</button>
+        <button class="button" onclick="submitForm()">Submit</button>
+    </div>
+</div>
+<script>
+    var startBtn = document.getElementById("startBtn");
+    var modals = document.getElementsByClassName("modal");
+
+    startBtn.onclick = function() {
+        modals[0].style.display = "block";
+    }
+
+    var closeButtons = document.getElementsByClassName("close");
+    for (var i = 0; i < closeButtons.length; i++) {
+        closeButtons[i].onclick = function() {
+            for (var j = 0; j < modals.length; j++) {
+                modals[j].style.display = "none";
+            }
+        }
+    }
+
+    function nextModal(currentModalId, nextModalId) {
+        document.getElementById(currentModalId).style.display = "none";
+        document.getElementById(nextModalId).style.display = "block";
+    }
+
+    function prevModal(currentModalId, prevModalId) {
+        document.getElementById(currentModalId).style.display = "none";
+        document.getElementById(prevModalId).style.display = "block";
+    }
+
+    function submitForm() {
+        const checkboxes1 = ["leak", "clog", "noWater", "overflow", "otherIssue"];
+        const checkboxes2 = ["kitchen", "bathroom", "basement", "outside", "otherLocation"];
+        const checkboxes3 = ["sink", "toilet", "shower", "washer", "otherFixture"];
+        const checkboxes4 = ["house", "apartment", "commercial", "otherProperty"];
+        const question5 = document.getElementById("question5").files[0];
+        const question6 = document.getElementById("question6").value;
+        const zipCode = document.getElementById("zipcode").value;
+        const phone = document.getElementById("phone").value;
+        const textUpdates = document.getElementById("textUpdates").checked;
+
+        const formData = {
+            emergencyIssue: getCheckedValues(checkboxes1),
+            location: getCheckedValues(checkboxes2),
+            affectedAppliances: getCheckedValues(checkboxes3),
+            propertyType: getCheckedValues(checkboxes4),
+            photo: question5 ? question5.name : "",
+            startDateTime: question6,
+            zipCode: zipCode,
+            phone: phone,
+            textUpdates: textUpdates
+        };
+
+        console.log("Form Data Submitted:", formData);
+        alert("Form submitted successfully!");
+
+        for (var i = 0; i < modals.length; i++) {
+            modals[i].style.display = "none";
+        }
+    }
+
+    function getCheckedValues(checkboxIds) {
+        return checkboxIds.filter(id => document.getElementById(id).checked);
+    }
+
+    window.onclick = function(event) {
+        for (var i = 0; i < modals.length; i++) {
+            if (event.target == modals[i]) {
+                modals[i].style.display = "none";
+            }
+        }
+    }
+</script>
     <div style="position: absolute;
     top: 285px;
     left: 175px;">
