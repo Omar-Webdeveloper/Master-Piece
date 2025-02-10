@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            background-color: #d9eafd;
+            opacity: 70%;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #0073e6;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .nav {
+                display: none;
+                flex-direction: column;
+                background-color: #d9eafd;
+                padding: 10px;
+                position: absolute;
+                top: 60px;
+                width: 100%;
+                left: 0;
+                opacity: 90%;
+            }
+
+            .nav.show {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="./master pictures/logo.png" alt="Work Image" class="logo" />
+        </a>
+        <div class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="Services.html" class="nav-link">Services</a>
+            <a href="About Us.html" class="nav-link">About Us</a>
+            <a href="Contact Us.html" class="nav-link">Contact Us</a>
+            <a href="User_profile.html" class="nav-link">User Profile</a>
+            <a href="Employee_profile.html" class="nav-link">Employee Profile</a>
+            <a href="Login.html" class="nav-link">Login/Registration</a>
+            <a href="Employee Job Application.html" class="nav-link">Join Our Network</a>
+            <a href="#" class="nav-link">Log out</a>
+        </div>
+        <div class="menu-icon" id="menu-icon" onclick="myFunction()"><i class="fa fa-bars"></i></div>
+    </div>
+
+    <script>
+        
+        const menuIcon = document.getElementById('menu-icon');
+        const nav = document.querySelector('.nav');
+
+        menuIcon.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

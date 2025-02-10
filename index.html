@@ -289,53 +289,67 @@
 }
 
 
-/* Fifth Section */
+
 .fifth_section {
-    padding: 20px;
-    background-color: #D9EAFD;
+  padding: 20px;
+  background-color: #D9EAFD;
 }
 
 .faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .faq-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .faq-item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 10px 0;
-    padding: 15px;
-    text-align: left;
-    transition: background-color 0.2s;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 15px;
+  text-align: left;
+  transition: background-color 0.2s;
 }
 
 .faq-item:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .faq-question {
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.faq-icon {
+  margin-right: 10px;
 }
 
 .faq-answer {
-    display: none;
-    font-size: 16px;
-    margin-top: 10px;
+  display: none;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 .faq-item.active .faq-answer {
-    display: block;
+  display: block;
 }
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+
+
+
 
 
 
@@ -719,33 +733,68 @@
 
 
 
-   
+  
     <div class="fifth_section">
-      <div class="faq-container">
-        <div class="faq-title">FAQ's</div>
-        <div class="faq-item">
-          <div class="faq-question">
-            What types of home services do you offer?
+        <div class="faq-container">
+          <div class="faq-title">FAQ's</div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-icon">+</span> What types of home services do you offer?
+            </div>
+            <div class="faq-answer">We offer a wide range of home services, including cleaning, plumbing, electrical repairs, and more.</div>
           </div>
-        </div>
-        <div class="faq-item active">
-          <div class="faq-question">How do I book a service?</div>
-          <div class="faq-answer">
-            Yes, all of our service providers are fully licensed, insured, and
-            highly trained in their respective fields. We carefully vet each
-            professional to ensure they meet our high standards of quality and
-            reliability, so you can have peace of mind knowing your home is in
-            good hands.
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-icon">+</span> How do I book a service?
+            </div>
+            <div class="faq-answer">You can book a service through our website or by calling our customer service hotline.</div>
           </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Are your service providers licensed?</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">How to pay for the provided service?</div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-icon">+</span> Are your service providers licensed?
+            </div>
+            <div class="faq-answer">Yes, all of our service providers are fully licensed, insured, and highly trained in their respective fields.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-icon">+</span> How to pay for the provided service?
+            </div>
+            <div class="faq-answer">You can pay for the service online through our secure payment gateway or in cash upon completion of the service.</div>
+          </div>
         </div>
       </div>
-    </div>  
+    <script>
+document.querySelectorAll('.faq-question').forEach(item => {
+  item.addEventListener('click', () => {
+    const faqItem = item.parentElement;
+    const faqAnswer = faqItem.querySelector('.faq-answer');
+    faqItem.classList.toggle('active');
+    
+    if (faqItem.classList.contains('active')) {
+      let i = 0;
+      const text = faqAnswer.textContent;
+      faqAnswer.textContent = '';
+      const interval = setInterval(() => {
+        if (i < text.length) {
+          faqAnswer.textContent += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 50); // Adjust the speed by changing the interval value
+    } else {
+      faqAnswer.textContent = faqAnswer.getAttribute('data-text');
+    }
+  });
+});
+
+document.querySelectorAll('.faq-answer').forEach(answer => {
+  answer.setAttribute('data-text', answer.textContent);
+});
+
+    </script>      
+
+
 
     <section class="contact-section">
         <div class="illustration">
