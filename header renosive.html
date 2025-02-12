@@ -26,6 +26,7 @@
         .nav {
             display: flex;
             gap: 15px;
+            align-items: center;
         }
 
         .nav-link {
@@ -37,6 +38,11 @@
 
         .nav-link:hover {
             color: #0073e6;
+        }
+
+        .language-select {
+            padding: 5px;
+            font-size: 16px;
         }
 
         .menu-icon {
@@ -66,13 +72,26 @@
                 display: block;
             }
         }
+
+        .logo-select-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <a href="index.html">
-            <img src="./master pictures/logo.png" alt="Work Image" class="logo" />
-        </a>
+        <div class="logo-select-container">
+            <a href="index.html">
+                <img src="./master pictures/logo.png" alt="Work Image" class="logo" />
+            </a>
+            <label> Language:</label>
+            <select class="language-select" id="language-select">
+                <option value="ar">Arabic</option>
+                <option value="en">English</option>
+            </select>
+        </div>
         <div class="nav">
             <a href="index.html" class="nav-link">Home</a>
             <a href="Services.html" class="nav-link">Services</a>
@@ -84,16 +103,22 @@
             <a href="Employee Job Application.html" class="nav-link">Join Our Network</a>
             <a href="#" class="nav-link">Log out</a>
         </div>
-        <div class="menu-icon" id="menu-icon" onclick="myFunction()"><i class="fa fa-bars"></i></div>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
     </div>
 
     <script>
-        
         const menuIcon = document.getElementById('menu-icon');
         const nav = document.querySelector('.nav');
+        const languageSelect = document.getElementById('language-select');
 
         menuIcon.addEventListener('click', () => {
             nav.classList.toggle('show');
+        });
+
+        languageSelect.addEventListener('change', (event) => {
+            const selectedLanguage = event.target.value;
+            // Add logic to handle language change
+            console.log('Selected language:', selectedLanguage);
         });
     </script>
 </body>
