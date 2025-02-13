@@ -980,7 +980,7 @@ left: 173px;">
             </div>
             <div class="sixth_text">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="index.html">Home </a>
+                  <a class="nav-item nav-link active" href="index.html">Home </a>
                     <a class="nav-item nav-link active" href="Services.html">Services</a>
                     <a class="nav-item nav-link active" href="About Us.html">About Us</a>
                     <a class="nav-item nav-link active" href="Contact Us.html">Contact Us</a>
@@ -989,6 +989,7 @@ left: 173px;">
                     <a class="nav-item nav-link active" href="Login.html">Login/Registration</a>
                     <a class="nav-item nav-link active" href="Employee Job Application.html">Join Our Network</a>
                     <a class="nav-item nav-link active" href="#">Log out</a>
+      
                 </div>
             </div>
             <div class="map">
@@ -1028,5 +1029,54 @@ left: 173px;">
       
         </div>
     </div>
+    <script>
+        document.getElementById('language-select').addEventListener('change', function () {
+    var selectedLanguage = this.value;
+
+    // Call the function to update the content based on the selected language
+    changeLanguage(selectedLanguage);
+});
+
+function changeLanguage(language) {
+    if (language === 'ar') {
+        // Change text to Arabic
+        document.querySelector('.word:nth-child(1)').textContent = 'عن';
+        document.querySelector('.word:nth-child(2)').textContent = 'صور';
+        document.querySelector('.word:nth-child(3)').textContent = 'التقييم';
+        document.querySelector('.word:nth-child(4)').textContent = 'المؤهلات';
+        document.querySelector('.word:nth-child(5)').textContent = 'الأسئلة الشائعة';
+        
+        // Change other texts on the page to Arabic
+        document.querySelector('.review-title1').textContent = 'التقييمات';
+        document.querySelector('.review-text1').textContent = 'قام العملاء بتقييم هذا المحترف بدرجة عالية من حيث الاحترافية والاستجابة وجودة العمل.';
+        document.querySelector('.credentials-title').textContent = 'المؤهلات';
+        document.querySelector('.faq-title').textContent = 'الأسئلة الشائعة';
+        document.querySelector('.faq-question p').textContent = 'ماذا يجب أن يعرف العميل عن تسعيرك (مثل الخصومات والرسوم)؟';
+        document.querySelector('.faq-question + p').textContent = 'Elite Rooter يتقاضى رسومًا بناءً على العمل وليس الساعة بحيث يعرف عملاؤنا السعر قبل أن نبدأ ولا توجد مفاجآت بعد ذلك. يرجى السؤال عن القسائم التي نقدمها في كثير من الأحيان لخدمات تنظيف المجاري. نحن دائمًا نقدم خصم 15% لكبار السن والجيش والمعلمين. لا يمكن دمج القسائم/الخصومات.';
+        
+        // Adjust other page elements if necessary
+        // For example, you can change the labels, buttons, etc.
+
+    } else if (language === 'en') {
+        // Change text to English (Restore default English text)
+        document.querySelector('.word:nth-child(1)').textContent = 'About';
+        document.querySelector('.word:nth-child(2)').textContent = 'Photos';
+        document.querySelector('.word:nth-child(3)').textContent = 'Review';
+        document.querySelector('.word:nth-child(4)').textContent = 'Credentials';
+        document.querySelector('.word:nth-child(5)').textContent = 'FAQs';
+        
+        // Change other texts on the page to English
+        document.querySelector('.review-title1').textContent = 'Reviews';
+        document.querySelector('.review-text1').textContent = 'Customers rated this pro highly for professionalism, responsiveness, and work quality.';
+        document.querySelector('.credentials-title').textContent = 'Credentials';
+        document.querySelector('.faq-title').textContent = 'FAQ';
+        document.querySelector('.faq-question p').textContent = 'What should the customer know about your pricing (e.g., discounts, fees)?';
+        document.querySelector('.faq-question + p').textContent = 'Elite Rooter charges by the job not the hour so our clients know the price before we start and there are no surprises afterwards. Please ask about coupons that we often have for our drain cleaning services. We always offer 15% discounts for our seniors, military, and educators. Coupons/discounts cannot be combined.';
+        
+        // Adjust other page elements if necessary
+    }
+}
+
+    </script>
 </body>
 </html>

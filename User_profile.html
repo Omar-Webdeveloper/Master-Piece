@@ -148,7 +148,7 @@
     justify-content: space-between;
     padding: 20px;
     background-color: #d9eafd;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .foot_text {
@@ -162,7 +162,7 @@
 }
 
 .foot_text a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -204,7 +204,7 @@
     text-align: center;
     padding: 10px;
     background-color: #d9eafd;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .seventh-container hr {
@@ -217,7 +217,7 @@
 
 .seventh-container a {
     margin: 0 10px;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 24px;
     transition: color 0.3s ease;
@@ -325,11 +325,16 @@
             </div>
             <div class="sixth_text">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#S2">About Us</a>
-                    <a class="nav-item nav-link active" href="#S3">Services</a>
-                    <a class="nav-item nav-link active" href="#S3">Projects</a>
-                    <a class="nav-item nav-link active" href="#S4">Login/Registration</a>
-                    <a class="nav-item nav-link active" href="#S5">Join Our Network</a>
+                  <a class="nav-item nav-link active" href="index.html">Home </a>
+                    <a class="nav-item nav-link active" href="Services.html">Services</a>
+                    <a class="nav-item nav-link active" href="About Us.html">About Us</a>
+                    <a class="nav-item nav-link active" href="Contact Us.html">Contact Us</a>
+                    <a class="nav-item nav-link active" href="User_profile.html">User Profile</a>
+                    <a class="nav-item nav-link active" href="Employee_profile.html">Employee Profile</a>
+                    <a class="nav-item nav-link active" href="Login.html">Login/Registration</a>
+                    <a class="nav-item nav-link active" href="Employee Job Application.html">Join Our Network</a>
+                    <a class="nav-item nav-link active" href="#">Log out</a>
+      
                 </div>
             </div>
             <div class="map">
@@ -368,6 +373,79 @@
             </section>
       
         </div>
+        <script>
+            document.getElementById('language-select').addEventListener('change', function() {
+                var selectedLanguage = this.value;
+                if (selectedLanguage === 'en') {
+                    // Change to English
+                    document.querySelector('.nav-link[href="index.html"]').textContent = 'Home';
+                    document.querySelector('.nav-link[href="Services.html"]').textContent = 'Services';
+                    document.querySelector('.nav-link[href="About Us.html"]').textContent = 'About Us';
+                    document.querySelector('.nav-link[href="Contact Us.html"]').textContent = 'Contact Us';
+                    document.querySelector('.nav-link[href="User_profile.html"]').textContent = 'User Profile';
+                    document.querySelector('.nav-link[href="Employee.html"]').textContent = 'Employee Profile';
+                    document.querySelector('.nav-link[href="Login.html"]').textContent = 'Login/Registration';
+                    document.querySelector('.nav-link[href="Employee Job Application.html"]').textContent = 'Join Our Network';
+                    document.querySelector('.nav-link[href="#"]').textContent = 'Log out';
+                    document.querySelector('.upload-btn').textContent = 'Upload Photo';
+                    document.querySelector('.stats div:nth-child(1) p:nth-child(2)').textContent = 'Projects';
+                    document.querySelector('.stats div:nth-child(2) p:nth-child(2)').textContent = 'Reviews';
+                    document.querySelector('.settings-btn:nth-child(1)').textContent = 'Account Settings';
+                    document.querySelector('.settings-btn:nth-child(2)').textContent = 'Notification Settings';
+                    document.querySelector('.logout-btn').textContent = 'Log Out';
+                    document.querySelector('.foot_text p:nth-child(1) a').textContent = '📞+00962 79 297 1776';
+                    document.querySelector('.foot_text p:nth-child(2) a').textContent = '✉️omarabojolban9@gmail.com';
+                    document.querySelector('.foot_text p:nth-child(3) a').textContent = '📍 Jordan, Amman';
+                    document.querySelector('.footer-logo').alt = 'Logo';
+        
+                    // Update sixth_text section
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="index.html"]').textContent = 'Home';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="Services.html"]').textContent = 'Services';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="About Us.html"]').textContent = 'About Us';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="Contact Us.html"]').textContent = 'Contact Us';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="User_profile.html"]').textContent = 'User Profile';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="Employee_profile.html"]').textContent = 'Employee Profile';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="Login.html"]').textContent = 'Login/Registration';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="Employee Job Application.html"]').textContent = 'Join Our Network';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="#"]').textContent = 'Log out';
+        
+                } else if (selectedLanguage === 'ar') {
+                    // Change to Arabic
+                    document.querySelector('.nav-link[href="index.html"]').textContent = 'الصفحة الرئيسية';
+                    document.querySelector('.nav-link[href="Services.html"]').textContent = 'الخدمات';
+                    document.querySelector('.nav-link[href="About Us.html"]').textContent = 'معلومات عنا';
+                    document.querySelector('.nav-link[href="Contact Us.html"]').textContent = 'اتصل بنا';
+                    document.querySelector('.nav-link[href="User_profile.html"]').textContent = 'الملف الشخصي';
+                    document.querySelector('.nav-link[href="Employee.html"]').textContent = 'ملف الموظف';
+                    document.querySelector('.nav-link[href="Login.html"]').textContent = 'تسجيل الدخول / التسجيل';
+                    document.querySelector('.nav-link[href="Employee Job Application.html"]').textContent = 'انضم إلى شبكتنا';
+                    document.querySelector('.nav-link[href="#"]').textContent = 'تسجيل الخروج';
+                    document.querySelector('.upload-btn').textContent = 'تحميل الصورة';
+                    document.querySelector('.stats div:nth-child(1) p:nth-child(2)').textContent = 'المشاريع';
+                    document.querySelector('.stats div:nth-child(2) p:nth-child(2)').textContent = 'التقييمات';
+                    document.querySelector('.settings-btn:nth-child(1)').textContent = 'إعدادات الحساب';
+                    document.querySelector('.settings-btn:nth-child(2)').textContent = 'إعدادات الإشعارات';
+                    document.querySelector('.logout-btn').textContent = 'تسجيل الخروج';
+                    document.querySelector('.foot_text p:nth-child(1) a').textContent = '📞+00962 79 297 1776';
+                    document.querySelector('.foot_text p:nth-child(2) a').textContent = '✉️omarabojolban9@gmail.com';
+                    document.querySelector('.foot_text p:nth-child(3) a').textContent = '📍 الأردن، عمان';
+                    document.querySelector('.footer-logo').alt = 'الشعار';
+        
+                    // Update sixth_text section
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="index.html"]').textContent = 'الصفحة الرئيسية';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="Services.html"]').textContent = 'الخدمات';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="About Us.html"]').textContent = 'معلومات عنا';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="Contact Us.html"]').textContent = 'اتصل بنا';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="User_profile.html"]').textContent = 'الملف الشخصي';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="Employee_profile.html"]').textContent = 'ملف الموظف';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="Login.html"]').textContent = 'تسجيل الدخول / التسجيل';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="Employee Job Application.html"]').textContent = 'انضم إلى شبكتنا';
+                    document.querySelector('.sixth_text .nav-item.nav-link.active[href="#"]').textContent = 'تسجيل الخروج';
+                }
+            });
+        </script>
+        
+        
         
 </body>
 </html>

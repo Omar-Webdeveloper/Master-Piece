@@ -166,67 +166,185 @@
         <label> Language:</label>
         <select class="language-select" id="language-select">
             <option value="ar">Arabic</option>
-            <option value="en">English</option>
+            <option value="en" selected>English</option>
         </select>
         <div class="nav">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="Services.html" class="nav-link">Services</a>
-          <a href="About Us.html" class="nav-link">About Us</a>
-          <a href="Contact Us.html" class="nav-link">Contact Us</a>
-          <a href="User_profile.html" class="nav-link">User Profile</a>
-          <a href="Employee.html" class="nav-link">Employee Profile</a>
-          <a href="Login.html" class="nav-link">Login/Registration</a>
-          <a href="Employee Job Application.html" class="nav-link">Join Our Network</a>
-          <a href="#" class="nav-link">Log out</a>
-  
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="Services.html" class="nav-link">Services</a>
+            <a href="About Us.html" class="nav-link">About Us</a>
+            <a href="Contact Us.html" class="nav-link">Contact Us</a>
+            <a href="User_profile.html" class="nav-link">User Profile</a>
+            <a href="Employee.html" class="nav-link">Employee Profile</a>
+            <a href="Login.html" class="nav-link">Login/Registration</a>
+            <a href="Employee Job Application.html" class="nav-link">Join Our Network</a>
+            <a href="#" class="nav-link">Log out</a>
         </div>
     </div>
+    
     <div>
         <img src="./master pictures/services-min.webp" alt="" style="height: 500px;width: auto;">
-        <p> Welcome to Complete Property Care, Your Trusted Partner for Home Services</p>
+        <p id="welcome-text">Welcome to Complete Property Care, Your Trusted Partner for Home Services</p>
         <br>
-        <p>Our Story At Complete Property Care, our journey began with a simple vision: to bring top-notch home services to every doorstep, making homes more comfortable and stress-free. The Founder OMAR aBO JOLBAN, a passionate homeowner who recognized the need for reliable, high-quality home services, our company has grown from a small local business to a trusted name in the community.</p>
+        <p id="our-story">Our Story At Complete Property Care, our journey began with a simple vision: to bring top-notch home services to every doorstep, making homes more comfortable and stress-free. The Founder OMAR aBO JOLBAN, a passionate homeowner who recognized the need for reliable, high-quality home services, our company has grown from a small local business to a trusted name in the community.</p>
         <br>
-        <p>What started as a one-person operation quickly expanded as word spread about our exceptional service and commitment to customer satisfaction. Today, we have a team of dedicated professionals who share our founder's vision and passion for excellence. Our mission is to make your life easier by taking care of all your home service needs, so you can focus on what truly matters.</p>        
+        <p id="mission">What started as a one-person operation quickly expanded as word spread about our exceptional service and commitment to customer satisfaction. Today, we have a team of dedicated professionals who share our founder's vision and passion for excellence. Our mission is to make your life easier by taking care of all your home service needs, so you can focus on what truly matters.</p>
         <br>
-        <p>Our Services At Complete Property Care, we offer a comprehensive range of home services designed to meet your unique needs:</p>
+        <p id="services-title">Our Services At Complete Property Care, we offer a comprehensive range of home services designed to meet your unique needs:</p>
         <br>
         <ol type="1">
-            <li> Handyman Services: From minor repairs to major renovations, our skilled handymen are equipped to handle it all with precision and care.
-            </li>      
-
-            <li> Cleaning Services: Our meticulous cleaners ensure your home is spotless, providing regular cleaning, deep cleaning, and specialized services such as carpet and window cleaning.
-            </li>        
-
-            <li> Plumbing Services: Our experienced plumbers can address any plumbing issue, from leaky faucets to complete system installations.
-            </li>       
-
-            <li> Electrical Services: Our certified electricians handle everything from minor electrical repairs to complex installations, ensuring your home is safe and efficient.
-            </li>        
-
-            <li> Landscaping Services: Our creative landscapers transform your outdoor spaces into beautiful, functional areas for you to enjoy.
-            </li>       
-
-            <li> Painting Services: Our professional painters bring a fresh, vibrant look to your home with interior and exterior painting services.
-            </li>        
-
+            <li id="handyman">Handyman Services: From minor repairs to major renovations, our skilled handymen are equipped to handle it all with precision and care.</li>
+            <li id="cleaning">Cleaning Services: Our meticulous cleaners ensure your home is spotless, providing regular cleaning, deep cleaning, and specialized services such as carpet and window cleaning.</li>
+            <li id="plumbing">Plumbing Services: Our experienced plumbers can address any plumbing issue, from leaky faucets to complete system installations.</li>
+            <li id="electrical">Electrical Services: Our certified electricians handle everything from minor electrical repairs to complex installations, ensuring your home is safe and efficient.</li>
+            <li id="landscaping">Landscaping Services: Our creative landscapers transform your outdoor spaces into beautiful, functional areas for you to enjoy.</li>
+            <li id="painting">Painting Services: Our professional painters bring a fresh, vibrant look to your home with interior and exterior painting services.</li>
         </ol>
-        <p>At Complete Property Care, we take pride in our work and are dedicated to providing the highest quality services to our customers. Your satisfaction is our top priority, and we are committed to going above and beyond to exceed your expectations.
-        </p>
-        <p>Thank you for choosing Complete Property Care – where exceptional service meets peace of mind.
-        </p>
-        <p>Your satisfaction is our priority. Let us take care of your home so you can focus on what matters most.</p>
-        <button style="    margin-top: 50px;
-        margin-left: 40px;
-        margin-bottom: 30px;
-        width: 275px;
-        height: 75px;
-        font-size: 20px;
-        font-weight: bold;
-        background-color: #FFE700;
-        border: thin;
-        border-radius: 30px;"> Book an Appointment Now! </button>
+        <p id="quality-text">At Complete Property Care, we take pride in our work and are dedicated to providing the highest quality services to our customers. Your satisfaction is our top priority, and we are committed to going above and beyond to exceed your expectations.</p>
+        <p id="thank-you">Thank you for choosing Complete Property Care – where exceptional service meets peace of mind.</p>
+        <p id="priority">Your satisfaction is our priority. Let us take care of your home so you can focus on what matters most.</p>
+        <button style="margin-top: 50px; margin-left: 40px; margin-bottom: 30px; width: 275px; height: 75px; font-size: 20px; font-weight: bold; background-color: #FFE700; border: thin; border-radius: 30px;">Book an Appointment Now!</button>
     </div>
+    
+    <!-- Other content omitted for brevity -->
+    
+    <script>
+        // Create a mapping of content for different languages
+        const content = {
+            en: {
+                welcomeText: "Welcome to Complete Property Care, Your Trusted Partner for Home Services",
+                ourStory: "Our Story At Complete Property Care, our journey began with a simple vision: to bring top-notch home services to every doorstep, making homes more comfortable and stress-free. The Founder OMAR aBO JOLBAN, a passionate homeowner who recognized the need for reliable, high-quality home services, our company has grown from a small local business to a trusted name in the community.",
+                mission: "What started as a one-person operation quickly expanded as word spread about our exceptional service and commitment to customer satisfaction. Today, we have a team of dedicated professionals who share our founder's vision and passion for excellence. Our mission is to make your life easier by taking care of all your home service needs, so you can focus on what truly matters.",
+                servicesTitle: "Our Services At Complete Property Care, we offer a comprehensive range of home services designed to meet your unique needs:",
+                handyman: "Handyman Services: From minor repairs to major renovations, our skilled handymen are equipped to handle it all with precision and care.",
+                cleaning: "Cleaning Services: Our meticulous cleaners ensure your home is spotless, providing regular cleaning, deep cleaning, and specialized services such as carpet and window cleaning.",
+                plumbing: "Plumbing Services: Our experienced plumbers can address any plumbing issue, from leaky faucets to complete system installations.",
+                electrical: "Electrical Services: Our certified electricians handle everything from minor electrical repairs to complex installations, ensuring your home is safe and efficient.",
+                landscaping: "Landscaping Services: Our creative landscapers transform your outdoor spaces into beautiful, functional areas for you to enjoy.",
+                painting: "Painting Services: Our professional painters bring a fresh, vibrant look to your home with interior and exterior painting services.",
+                qualityText: "At Complete Property Care, we take pride in our work and are dedicated to providing the highest quality services to our customers. Your satisfaction is our top priority, and we are committed to going above and beyond to exceed your expectations.",
+                thankYou: "Thank you for choosing Complete Property Care – where exceptional service meets peace of mind.",
+                priority: "Your satisfaction is our priority. Let us take care of your home so you can focus on what matters most."
+            },
+            ar: {
+                welcomeText: "مرحبًا بكم في Complete Property Care، شريكك الموثوق لخدمات المنزل",
+                ourStory: "قصتنا في Complete Property Care، بدأت رحلتنا برؤية بسيطة: جلب خدمات منزلية عالية الجودة إلى كل باب، مما يجعل المنازل أكثر راحة وخالية من التوتر. المؤسس عمر أبو جلبان، صاحب منزل شغوف أدرك الحاجة إلى خدمات منزلية موثوقة وعالية الجودة، وقد نمت شركتنا من عمل محلي صغير إلى اسم موثوق به في المجتمع.",
+                mission: "ما بدأ كعمل شخص واحد سرعان ما توسع مع انتشار كلمة الخدمة الاستثنائية والالتزام برضا العملاء. اليوم، لدينا فريق من المحترفين المخلصين الذين يشاركون رؤية مؤسسنا وشغفه بالتميز. مهمتنا هي جعل حياتك أسهل من خلال العناية بجميع احتياجات خدمات منزلك، حتى تتمكن من التركيز على ما يهم حقًا.",
+                servicesTitle: "خدماتنا في Complete Property Care، نقدم مجموعة شاملة من خدمات المنازل المصممة لتلبية احتياجاتك الفريدة:",
+                handyman: "خدمات الحرفيين: من الإصلاحات الصغيرة إلى التجديدات الكبيرة، يتمتع حرفيونا المهرة بالقدرة على التعامل مع كل شيء بدقة وعناية.",
+                cleaning: "خدمات التنظيف: يضمن منظفونا الدقيقون أن يكون منزلك نظيفًا تمامًا، حيث نقدم خدمات التنظيف المنتظم والعميق، بالإضافة إلى خدمات متخصصة مثل تنظيف السجاد والنوافذ.",
+                plumbing: "خدمات السباكة: يمكن لسباكينا ذوي الخبرة معالجة أي مشكلة في السباكة، من الحنفيات المتسربة إلى تركيب الأنظمة بالكامل.",
+                electrical: "خدمات الكهرباء: يتعامل كهربائيونا المعتمدون مع كل شيء من الإصلاحات الكهربائية الصغيرة إلى التركيبات المعقدة، مما يضمن أن يكون منزلك آمنًا وفعالًا.",
+                landscaping: "خدمات تنسيق الحدائق: يقوم مصممونا المبدعون بتحويل المساحات الخارجية إلى مناطق جميلة وعملية لتستمتع بها.",
+                painting: "خدمات الطلاء: يقوم رسامونا المحترفون بتقديم مظهر جديد ومنعش لمنزلك من خلال خدمات الطلاء الداخلية والخارجية.",
+                qualityText: "في Complete Property Care، نعتز بعملنا ونحن ملتزمون بتقديم أعلى مستوى من الخدمات لعملائنا. رضاكم هو أولويتنا القصوى، ونحن ملتزمون بتجاوز توقعاتكم.",
+                thankYou: "شكرًا لاختيارك Complete Property Care – حيث تلتقي الخدمة الاستثنائية براحة البال.",
+                priority: "رضاك هو أولويتنا. دعنا نعتني بمنزلك حتى تتمكن من التركيز على ما يهمك."
+            }
+        };
+    
+        // Function to switch languages
+        function switchLanguage(language) {
+            document.getElementById("welcome-text").innerText = content[language].welcomeText;
+            document.getElementById("our-story").innerText = content[language].ourStory;
+            document.getElementById("mission").innerText = content[language].mission;
+            document.getElementById("services-title").innerText = content[language].servicesTitle;
+            document.getElementById("handyman").innerText = content[language].handyman;
+            document.getElementById("cleaning").innerText = content[language].cleaning;
+            document.getElementById("plumbing").innerText = content[language].plumbing;
+            document.getElementById("electrical").innerText = content[language].electrical;
+            document.getElementById("landscaping").innerText = content[language].landscaping;
+            document.getElementById("painting").innerText = content[language].painting;
+            document.getElementById("quality-text").innerText = content[language].qualityText;
+            document.getElementById("thank-you").innerText = content[language].thankYou;
+            document.getElementById("priority").innerText = content[language].priority;
+        }
+    
+        // Event listener for language change
+        document.getElementById("language-select").addEventListener("change", function(event) {
+            switchLanguage(event.target.value);
+        });
+
+        const content1 = {
+    en: {
+        // Existing content for the main section
+        // ...
+
+        // New content for the Sixth and Seventh containers
+        phone: "📞+00962 79 297 1776",
+        email: "✉️omarabojolban9@gmail.com",
+        address: "📍 Jordan, Amman",
+        home: "Home",
+        services: "Services",
+        aboutUs: "About Us",
+        contactUs: "Contact Us",
+        userProfile: "User Profile",
+        employeeProfile: "Employee Profile",
+        login: "Login/Registration",
+        joinNetwork: "Join Our Network",
+        logout: "Log out",
+        copyright: "&copy; 2025 Complete Property Care.com",
+    },
+    ar: {
+        // Existing Arabic content for the main section
+        // ...
+
+        // New content for the Sixth and Seventh containers
+        phone: "📞+00962 79 297 1776",
+        email: "✉️omarabojolban9@gmail.com",
+        address: "📍 الأردن، عمان",
+        home: "الرئيسية",
+        services: "الخدمات",
+        aboutUs: "عنّا",
+        contactUs: "اتصل بنا",
+        userProfile: "الملف الشخصي للمستخدم",
+        employeeProfile: "الملف الشخصي للموظف",
+        login: "تسجيل الدخول/التسجيل",
+        joinNetwork: "انضم إلى شبكتنا",
+        logout: "تسجيل الخروج",
+        copyright: "&copy; 2025 Complete Property Care.com",
+    }
+};
+
+function switchLanguage(language) {
+    // Switch content for the main section
+    document.getElementById("welcome-text").innerText = content[language].welcomeText;
+    document.getElementById("our-story").innerText = content[language].ourStory;
+    document.getElementById("mission").innerText = content[language].mission;
+    document.getElementById("services-title").innerText = content[language].servicesTitle;
+    document.getElementById("handyman").innerText = content[language].handyman;
+    document.getElementById("cleaning").innerText = content[language].cleaning;
+    document.getElementById("plumbing").innerText = content[language].plumbing;
+    document.getElementById("electrical").innerText = content[language].electrical;
+    document.getElementById("landscaping").innerText = content[language].landscaping;
+    document.getElementById("painting").innerText = content[language].painting;
+    document.getElementById("quality-text").innerText = content[language].qualityText;
+    document.getElementById("thank-you").innerText = content[language].thankYou;
+    document.getElementById("priority").innerText = content[language].priority;
+
+    // Switch content for Sixth container
+    document.getElementById("phone").innerHTML = content[language].phone;
+    document.getElementById("email").innerHTML = content[language].email;
+    document.getElementById("address").innerHTML = content[language].address;
+    document.getElementById("home").innerText = content[language].home;
+    document.getElementById("services").innerText = content[language].services;
+    document.getElementById("about-us").innerText = content[language].aboutUs;
+    document.getElementById("contact-us").innerText = content[language].contactUs;
+    document.getElementById("user-profile").innerText = content[language].userProfile;
+    document.getElementById("employee-profile").innerText = content[language].employeeProfile;
+    document.getElementById("login").innerText = content[language].login;
+    document.getElementById("join-network").innerText = content[language].joinNetwork;
+    document.getElementById("logout").innerText = content[language].logout;
+
+    // Switch content for Seventh container
+    document.getElementById("copyright").innerHTML = content[language].copyright;
+}
+
+// Event listener for language change
+document.getElementById("language-select").addEventListener("change", function(event) {
+    switchLanguage(event.target.value);
+});
+
+    </script>
     
 
     <div class="Sixth_container">
@@ -239,14 +357,14 @@
         <div class="sixth_text">
             <div class="navbar-nav">
               <a class="nav-item nav-link active" href="index.html">Home </a>
-              <a class="nav-item nav-link active" href="Services.html">Services</a>
-              <a class="nav-item nav-link active" href="About Us.html">About Us</a>
-              <a class="nav-item nav-link active" href="Contact Us.html">Contact Us</a>
-              <a class="nav-item nav-link active" href="User_profile.html">User Profile</a>
-              <a class="nav-item nav-link active" href="Employee_profile.html">Employee Profile</a>
-              <a class="nav-item nav-link active" href="Login.html">Login/Registration</a>
-              <a class="nav-item nav-link active" href="Employee Job Application.html">Join Our Network</a>
-              <a class="nav-item nav-link active" href="#">Log out</a>
+                <a class="nav-item nav-link active" href="Services.html">Services</a>
+                <a class="nav-item nav-link active" href="About Us.html">About Us</a>
+                <a class="nav-item nav-link active" href="Contact Us.html">Contact Us</a>
+                <a class="nav-item nav-link active" href="User_profile.html">User Profile</a>
+                <a class="nav-item nav-link active" href="Employee_profile.html">Employee Profile</a>
+                <a class="nav-item nav-link active" href="Login.html">Login/Registration</a>
+                <a class="nav-item nav-link active" href="Employee Job Application.html">Join Our Network</a>
+                <a class="nav-item nav-link active" href="#">Log out</a>
   
             </div>
         </div>
@@ -263,16 +381,16 @@
             <div class="row justify-content-center">
               <div class="col-md-8">
                 <div class="d-flex flex-wrap justify-content-center gap-3">
-                  <a href="#" class="btn btn-primary btn-lg" style="background-color: #d9eafd; border-color: #0077b5;">
+                  <a href="#" class="btn btn-primary btn-lg">
                     <i class="bi bi-facebook me-2"></i>
                   </a>
-                  <a href="#" class="btn btn-info btn-lg text-white" style="background-color: #d9eafd; border-color: #0077b5;">
+                  <a href="#" class="btn btn-info btn-lg text-white">
                     <i class="bi bi-twitter me-2"></i>
                   </a>
-                  <a href="#" class="btn btn-danger btn-lg" style="background-color: #d9eafd; border-color: purple;">
+                  <a href="#" class="btn btn-danger btn-lg">
                     <i class="bi bi-instagram me-2"></i>
                   </a>
-                  <a href="#" class="btn btn-success btn-lg" style="background-color: #d9eafd; border-color: green;">
+                  <a href="#" class="btn btn-success btn-lg">
                     <i class="bi bi-whatsapp me-2"></i>
                   </a>
         
@@ -286,8 +404,5 @@
         </section>
   
     </div>
-    
-  
-  
 </body>
 </html>

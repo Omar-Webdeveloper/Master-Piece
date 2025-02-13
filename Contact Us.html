@@ -200,124 +200,199 @@
 
     </style>
 </head>
+
 <body>
+    <!-- Header -->
     <div class="header">
         <a href="index.html">
             <img src="./master pictures/logo.png" alt="Work Image" class="logo" />
         </a>
-        <label> Language:</label>
+        <label id="language-label">Language:</label>
         <select class="language-select" id="language-select">
             <option value="ar">Arabic</option>
-            <option value="en">English</option>
+            <option value="en" selected>English</option>
         </select>
         <div class="nav">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="Services.html" class="nav-link">Services</a>
-          <a href="About Us.html" class="nav-link">About Us</a>
-          <a href="Contact Us.html" class="nav-link">Contact Us</a>
-          <a href="User_profile.html" class="nav-link">User Profile</a>
-          <a href="Employee.html" class="nav-link">Employee Profile</a>
-          <a href="Login.html" class="nav-link">Login/Registration</a>
-          <a href="Employee Job Application.html" class="nav-link">Join Our Network</a>
-          <a href="#" class="nav-link">Log out</a>
-  
+            <a href="index.html" class="nav-link" id="home-link">Home</a>
+            <a href="Services.html" class="nav-link" id="services-link">Services</a>
+            <a href="About Us.html" class="nav-link" id="about-us-link">About Us</a>
+            <a href="Contact Us.html" class="nav-link" id="contact-us-link">Contact Us</a>
+            <a href="User_profile.html" class="nav-link" id="user-profile-link">User Profile</a>
+            <a href="Employee.html" class="nav-link" id="employee-profile-link">Employee Profile</a>
+            <a href="Login.html" class="nav-link" id="login-link">Login/Registration</a>
+            <a href="Employee Job Application.html" class="nav-link" id="join-network-link">Join Our Network</a>
+            <a href="#" class="nav-link" id="logout-link">Log out</a>
         </div>
     </div>
-    
-    
+
+    <!-- Contact Section -->
     <section class="contact-section">
         <div class="illustration">
-            <img src="./master pictures/image_contact_us.jpg" alt="Working remotely - simple illustration" style="border-radius: 30px;
-            width: 260px;
-            height: 300px;
-            margin-left: 50px;">
+            <img src="./master pictures/image_contact_us.jpg" alt="Working remotely - simple illustration" style="border-radius: 30px;width: 260px;height: 300px;margin-left: 50px;">
         </div>
-      <div class="form-container">
-          <form class="contact-form">
-              <div class="form-group">
-                  <label for="first-name">First Name</label>
-                  <input type="text" id="first-name" class="input-field" value="omar">
-              </div>
-              <div class="form-group">
-                  <label for="last-name">Last Name</label>
-                  <input type="text" id="last-name" class="input-field" value="Abo jolban">
-              </div>
-              <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" class="input-field" value="example@gmail.com">
-              </div>
-              <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea id="message" class="textarea-field"></textarea>
-              </div>
-              <button type="submit" class="send-button">Send</button>
-          </form>
-      </div>
-    
-  </section>
+        <div class="form-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="first-name" id="first-name-label">First Name</label>
+                    <input type="text" id="first-name" class="input-field" value="omar">
+                </div>
+                <div class="form-group">
+                    <label for="last-name" id="last-name-label">Last Name</label>
+                    <input type="text" id="last-name" class="input-field" value="Abo jolban">
+                </div>
+                <div class="form-group">
+                    <label for="email" id="email-label">Email</label>
+                    <input type="email" id="email" class="input-field" value="example@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="message" id="message-label">Message</label>
+                    <textarea id="message" class="textarea-field"></textarea>
+                </div>
+                <button type="submit" class="send-button" id="send-button">Send</button>
+            </form>
+        </div>
+    </section>
 
-
-
-
-    
+    <!-- Footer -->
     <div class="Sixth_container">
         <div class="foot_text">
-            <p><a href="#">📞+00962 79 297 1776</a></p>
-            <p><a href="#">✉️omarabojolban9@gmail.com</a></p>
-            <p><a href="#">📍 Jordan, Amman</a></p>
+            <p><a href="#" id="phone">📞+00962 79 297 1776</a></p>
+            <p><a href="#" id="email-footer">✉️omarabojolban9@gmail.com</a></p>
+            <p><a href="#" id="address">📍 Jordan, Amman</a></p>
             <img src="./master pictures/logo.png" alt="Logo" class="footer-logo">
         </div>
         <div class="sixth_text">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="#S2">Home </a>
-              <a class="nav-item nav-link active" href="#S2">Services</a>
-              <a class="nav-item nav-link active" href="#S2">About Us</a>
-              <a class="nav-item nav-link active" href="#S2">Contact Us</a>
-              <a class="nav-item nav-link active" href="#S2">User Profile</a>
-              <a class="nav-item nav-link active" href="#S2">Employee Profile</a>
-              <a class="nav-item nav-link active" href="#S4">Login/Registration</a>
-              <a class="nav-item nav-link active" href="#S5">Join Our Network</a>
-              <a class="nav-item nav-link active" href="#S2">Log out</a>
-    
+                <a class="nav-item nav-link active" href="#S2" id="home-footer-link">Home</a>
+                <a class="nav-item nav-link active" href="#S2" id="services-footer-link">Services</a>
+                <a class="nav-item nav-link active" href="#S2" id="about-us-footer-link">About Us</a>
+                <a class="nav-item nav-link active" href="#S2" id="contact-us-footer-link">Contact Us</a>
+                <a class="nav-item nav-link active" href="#S2" id="user-profile-footer-link">User Profile</a>
+                <a class="nav-item nav-link active" href="#S2" id="employee-profile-footer-link">Employee Profile</a>
+                <a class="nav-item nav-link active" href="#S4" id="login-footer-link">Login/Registration</a>
+                <a class="nav-item nav-link active" href="#S5" id="join-network-footer-link">Join Our Network</a>
+                <a class="nav-item nav-link active" href="#S2" id="logout-footer-link">Log out</a>
             </div>
         </div>
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.0097298110522!2d35.85224372511936!3d32.55258557375814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c7715f2c2e7ab%3A0x51755840c8ddbefd!2sOrange%20Digital%20Village%20Irbid!5e0!3m2!1sar!2sjo!4v1734852423304!5m2!1sar!2sjo" width="325" height="275" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+
+    <!-- Footer Bottom -->
     <div class="seventh-container">
         <hr />
         <p>&copy; 2025 Complete Property Care.com</p>
-    
         <section class="social-buttons py-5 bg-light">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-md-8">
-                <div class="d-flex flex-wrap justify-content-center gap-3">
-                  <a href="#" class="btn btn-primary btn-lg">
-                    <i class="bi bi-facebook me-2"></i>
-                  </a>
-                  <a href="#" class="btn btn-info btn-lg text-white">
-                    <i class="bi bi-twitter me-2"></i>
-                  </a>
-                  <a href="#" class="btn btn-danger btn-lg">
-                    <i class="bi bi-instagram me-2"></i>
-                  </a>
-                  <a href="#" class="btn btn-success btn-lg">
-                    <i class="bi bi-whatsapp me-2"></i>
-                  </a>
-        
-                  <a href="#" class="btn btn-primary btn-lg" style="background-color: #d9eafd; border-color: #0077b5;">
-                    <i class="bi bi-linkedin me-2"></i>
-                  </a>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="#" class="btn btn-primary btn-lg">
+                                <i class="bi bi-facebook me-2"></i>
+                            </a>
+                            <a href="#" class="btn btn-info btn-lg text-white">
+                                <i class="bi bi-twitter me-2"></i>
+                            </a>
+                            <a href="#" class="btn btn-danger btn-lg">
+                                <i class="bi bi-instagram me-2"></i>
+                            </a>
+                            <a href="#" class="btn btn-success btn-lg">
+                                <i class="bi bi-whatsapp me-2"></i>
+                            </a>
+                            <a href="#" class="btn btn-primary btn-lg" style="background-color: #d9eafd; border-color: #0077b5;">
+                                <i class="bi bi-linkedin me-2"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-    
     </div>
-    
-    
+
+    <script>
+        // Language data for English and Arabic
+        const languageData = {
+            en: {
+                "language-label": "Language:",
+                "home-link": "Home",
+                "services-link": "Services",
+                "about-us-link": "About Us",
+                "contact-us-link": "Contact Us",
+                "user-profile-link": "User Profile",
+                "employee-profile-link": "Employee Profile",
+                "login-link": "Login/Registration",
+                "join-network-link": "Join Our Network",
+                "logout-link": "Log out",
+                "first-name-label": "First Name",
+                "last-name-label": "Last Name",
+                "email-label": "Email",
+                "message-label": "Message",
+                "send-button": "Send",
+                "phone": "📞+00962 79 297 1776",
+                "email-footer": "✉️omarabojolban9@gmail.com",
+                "address": "📍 Jordan, Amman",
+                "home-footer-link": "Home",
+                "services-footer-link": "Services",
+                "about-us-footer-link": "About Us",
+                "contact-us-footer-link": "Contact Us",
+                "user-profile-footer-link": "User Profile",
+                "employee-profile-footer-link": "Employee Profile",
+                "login-footer-link": "Login/Registration",
+                "join-network-footer-link": "Join Our Network",
+                "logout-footer-link": "Log out",
+            },
+            ar: {
+                "language-label": "اللغة:",
+                "home-link": "الصفحة الرئيسية",
+                "services-link": "الخدمات",
+                "about-us-link": "من نحن",
+                "contact-us-link": "اتصل بنا",
+                "user-profile-link": "الملف الشخصي للمستخدم",
+                "employee-profile-link": "الملف الشخصي للموظف",
+                "login-link": "تسجيل الدخول / التسجيل",
+                "join-network-link": "انضم إلى شبكتنا",
+                "logout-link": "تسجيل الخروج",
+                "first-name-label": "الاسم الأول",
+                "last-name-label": "الاسم الأخير",
+                "email-label": "البريد الإلكتروني",
+                "message-label": "الرسالة",
+                "send-button": "إرسال",
+                "phone": "📞+00962 79 297 1776",
+                "email-footer": "✉️omarabojolban9@gmail.com",
+                "address": "📍 الأردن، عمان",
+                "home-footer-link": "الصفحة الرئيسية",
+                "services-footer-link": "الخدمات",
+                "about-us-footer-link": "من نحن",
+                "contact-us-footer-link": "اتصل بنا",
+                "user-profile-footer-link": "الملف الشخصي للمستخدم",
+                "employee-profile-footer-link": "الملف الشخصي للموظف",
+                "login-footer-link": "تسجيل الدخول / التسجيل",
+                "join-network-footer-link": "انضم إلى شبكتنا",
+                "logout-footer-link": "تسجيل الخروج",
+            }
+        };
+
+        // Function to change language
+        function changeLanguage(language) {
+            const elements = document.querySelectorAll('[id]'); // All elements with an ID
+            elements.forEach(element => {
+                const textKey = element.id;
+                if (languageData[language] && languageData[language][textKey]) {
+                    element.textContent = languageData[language][textKey];
+                }
+            });
+        }
+
+        // Event listener for language change
+        document.getElementById('language-select').addEventListener('change', function () {
+            const selectedLanguage = this.value;
+            changeLanguage(selectedLanguage);
+        });
+
+        // Default language set to English on page load
+        changeLanguage('en');
+    </script>
 </body>
+
 </html>
